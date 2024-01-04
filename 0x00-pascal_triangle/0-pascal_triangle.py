@@ -1,4 +1,12 @@
+#!/usr/bin/python3
+"""
+A code that prints pythagoras triangle/right angle triangle
+"""
 def pascal_triangle(n):
+    '''
+    Check if n is less than or equal to 0
+    Return an empty list if n is not a positive integer
+    '''
     if n <= 0:
         return []
 
