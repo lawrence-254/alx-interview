@@ -2,6 +2,8 @@
 """
 A code that prints pythagoras triangle/right angle triangle
 """
+
+
 def pascal_triangle(n):
     '''
     Check if n is less than or equal to 0
