@@ -1,22 +1,17 @@
 #!/usr/bin/python3
-"""
-You have n number of locked boxes in front of you
-Each box is numbered sequentially from 0 to n - 1
-and each box may contain keys to the other boxes.
-"""
+"""A python script that checks for sequencial numbering of boxes"""
 
 
 def canUnlockAll(boxes):
-    num_boxes = len(boxes)
-    visited = [False] * num_boxes
-    visited[0] = True
+    opened = set([0])
+    closed = set(boxes[0]).difference(set([0]))
+    n = len(boxes)
 
-    def dfs(box_index):
-        visited[box_index] = True
-        for key in boxes[box_index]:
-            if not visited[key]:
-                dfs(key)
-
-    dfs(0)
-
-    return all(visited)
+    while len(closed) > 0:
+        check = closed.pop()
+        if check >= n or check < 0 or not check:
+            continue
+        if check not in opened:
+            closed = closed.union(boxes[check])
+            opened.add(check)
+    return n == len(opened)
