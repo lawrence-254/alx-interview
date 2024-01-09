@@ -1,8 +1,4 @@
-0x00. Pascal's Triangle
-Algorithm
-Python
- By: Alexa Orrico, Software Engineer at Holberton School
- Weight: 1
- Project will start Jan 2, 2024 6:00 AM, must end by Jan 5, 2024 6:00 AM
- Checker was released at Jan 3, 2024 12:00 AM
+Create a function def pascal_triangle(n): that returns a list of lists of integers representing the Pascal’s triangle of n:
 
+Returns an empty list if n <= 0
+You can assume n will be always an integer
