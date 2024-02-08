@@ -19,6 +19,7 @@ pos = None
 The list of possible positions on the chessboard.
 '''
 
+
 def get_input():
     '''
     returns The size of the chessboard
@@ -38,6 +39,7 @@ def get_input():
         sys.exit(1)
     return n
 
+
 def is_attacking(pos0, pos1):
     '''
     returns True if the queens are in an attacking position else False.
@@ -45,6 +47,7 @@ def is_attacking(pos0, pos1):
     if (pos0[0] == pos1[0]) or (pos0[1] == pos1[1]):
         return True
     return abs(pos0[0] - pos1[0]) == abs(pos0[1] - pos1[1])
+
 
 def group_exists(group):
     '''
@@ -60,6 +63,7 @@ def group_exists(group):
         if i == n:
             return True
     return False
+
 
 def build_solution(row, group):
     """Builds a solution for the n queens problem.
