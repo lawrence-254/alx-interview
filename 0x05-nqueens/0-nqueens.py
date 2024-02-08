@@ -54,7 +54,7 @@ def group_exists(group):
     Checks if a group exists in the list of solutions.
     '''
     global solutions
-    for solutin in solutions:
+    for solution in solutions:
         i = 0
         for stn_pos in solution:
             for grp_pos in group:
